@@ -1,535 +1,324 @@
-```markdown
-\# ESP32-Sensor-Board
-
-
+# ESP32-Sensor-Board
 
 > A custom ESP32-C3 based sensor and embedded systems development board designed in KiCad 9.
 
+<p align="center">
+  <img src="images/PCB-3d-front.png" alt="ESP32 Sensor Board 3D View" width="850">
+</p>
 
+<p align="center">
+  <b>Custom ESP32-C3 Sensor & Embedded Systems Development Board</b>
+</p>
 
-!\[ESP32 Sensor Board](images/PCB-3d-front.png)
+---
 
+## 📌 Overview
 
+The **ESP32-Sensor-Board** is a custom embedded systems development board built around the **ESP32-C3** microcontroller.
 
-\---
+The board integrates environmental sensing, sound sensing, USB connectivity, battery charging, power regulation, user-interface controls, and external expansion interfaces into a single compact PCB.
 
+The complete hardware design was developed in **KiCad 9**, including schematic capture, hierarchical design, PCB layout, 3D visualization, custom libraries, DFM analysis, and manufacturing outputs.
 
+---
 
-\## Overview
+## ✨ Key Features
 
+- 🧠 ESP32-C3 based processing
+- 🌡️ BME280 environmental sensor
+- 🔊 On-board sound sensing
+- 🔌 USB connectivity
+- 🔋 Li-ion/Li-Po battery charging
+- ⚡ On-board voltage regulation
+- 💡 Power and charging indicators
+- 🔘 Boot and reset buttons
+- 📡 I2C interface
+- 🚀 SPI interface
+- 🔗 GPIO expansion
+- 🧪 Dedicated test points
+- 📦 Custom KiCad symbol and footprint libraries
+- 🏭 Manufacturing-ready Gerber and drill files
+- 📐 Hierarchical schematic design
 
+---
 
-The \*\*ESP32-Sensor-Board\*\* is a custom embedded systems development board built around the \*\*ESP32-C3\*\* microcontroller.
-
-
-
-The board integrates sensing, user-interface, USB connectivity, battery charging, power regulation, and external expansion interfaces into a single compact PCB.
-
-
-
-The complete design, from schematic capture through PCB layout and manufacturing outputs, was developed using \*\*KiCad 9\*\*.
-
-
-
-\---
-
-
-
-\## Key Features
-
-
-
-\- ESP32-C3 based processing
-
-\- BME280 environmental sensor
-
-\- On-board sound sensing
-
-\- USB connectivity
-
-\- Li-ion/Li-Po battery charging
-
-\- On-board voltage regulation
-
-\- Power and charging indicators
-
-\- Boot and reset buttons
-
-\- USB RX/TX indicators
-
-\- I2C interface
-
-\- SPI interface
-
-\- GPIO expansion
-
-\- Dedicated test points
-
-\- Custom KiCad symbol and footprint libraries
-
-\- Manufacturing-ready Gerber and drill files
-
-\- Hierarchical schematic design
-
-
-
-\---
-
-
-
-\## Hardware Overview
-
-
+# 🧩 Hardware Overview
 
 | Component / Feature | Description |
-
 |---|---|
-
 | Microcontroller | ESP32-C3 |
-
 | Environmental Sensor | BME280 |
-
 | Sound Sensing | On-board sound sensing circuit |
-
 | USB | USB connectivity |
-
-| Power | USB and rechargeable battery power |
-
-| Charging | Li-ion/Li-Po battery charging |
-
+| Power Input | USB / Rechargeable Battery |
+| Battery Charging | Li-ion/Li-Po charging circuit |
 | Regulation | On-board voltage regulation |
-
 | Communication | I2C / SPI |
-
 | Expansion | GPIO headers |
+| Debugging | Test points |
+| PCB Design | KiCad 9 |
 
-| Design Tool | KiCad 9 |
+---
 
+# 📐 Schematic
 
+The design follows a **hierarchical schematic structure**, separating the major functional blocks into dedicated schematic sheets.
 
-\---
+## Complete Schematic
 
+<p align="center">
+  <img src="images/ESP32-Schematic.png" alt="ESP32 Sensor Board Schematic" width="900">
+</p>
 
+---
 
-\## Schematic
+# 🌡️ Sensor Section
 
+The sensor subsystem includes the **BME280 environmental sensor**.
 
+### BME280
 
-The design uses a hierarchical schematic structure to separate the major functional blocks of the board.
+The BME280 provides digital measurements of:
 
+- Temperature
+- Relative Humidity
+- Atmospheric Pressure
 
+The sensor communicates with the ESP32-C3 through a digital interface.
 
-\### Complete Schematic
+### 🔊 Sound Sensing
 
+An on-board sound sensing circuit is also included for detecting variations in ambient sound.
 
+Potential applications include:
 
-!\[ESP32 Schematic](images/ESP32-Schematic.png)
+- Environmental monitoring
+- Sound/activity detection
+- IoT sensing
+- Event-triggered applications
 
+<p align="center">
+  <img src="images/Sensor-Section.png" alt="Sensor Section Schematic" width="900">
+</p>
 
+---
 
-\---
+# ⚡ Power Management
 
+The power subsystem manages the board's power input, battery charging, voltage regulation, and status indication.
 
+The design includes:
 
-\## Sensor Section
+- USB power input
+- Rechargeable battery support
+- Battery charging
+- Voltage regulation
+- Power-status indication
+- Charging-status indication
 
+<p align="center">
+  <img src="images/Power-section-Schematic.png" alt="Power Section Schematic" width="900">
+</p>
 
+---
 
-The sensor subsystem includes the \*\*BME280 environmental sensor\*\*, providing:
+# 🎛️ User Interface
 
+The board provides several controls and indicators for development, debugging, and normal operation.
 
+### User Interface Features
 
-\- Temperature measurement
+- Boot button
+- Reset button
+- Power indicator
+- Charging indicators
+- USB RX/TX indicators
+- Status indicators
 
-\- Relative humidity measurement
+<p align="center">
+  <img src="images/User-interface.png" alt="User Interface Schematic" width="900">
+</p>
 
-\- Atmospheric pressure measurement
+---
 
+# 🖥️ PCB Design
 
+The PCB was designed using **KiCad 9** with emphasis on:
 
-The board also includes an on-board sound sensing circuit for detecting changes in ambient sound.
+- Compact component placement
+- Organized routing
+- Functional block separation
+- Practical power distribution
+- Accessible debugging points
+- Clear silkscreen labeling
+- External expansion
+- Manufacturability
 
+## PCB Layout
 
+<p align="center">
+  <img src="images/PCB-layout.png" alt="PCB Layout" width="900">
+</p>
 
-!\[Sensor Section](images/Sensor-Section.png)
+## 3D PCB View
 
+<p align="center">
+  <img src="images/PCB-3d-front.png" alt="ESP32 Sensor Board 3D View" width="900">
+</p>
 
+---
 
-\---
+# 🔌 Interfaces
 
-
-
-\## Power Management
-
-
-
-The power section handles the board's power input, battery charging, regulation, and power-status indication.
-
-
-
-The design supports:
-
-
-
-\- USB power input
-
-\- Rechargeable battery operation
-
-\- Battery charging
-
-\- Regulated supply generation
-
-\- Power-status indication
-
-
-
-!\[Power Section](images/Power-section-Schematic.png)
-
-
-
-\---
-
-
-
-\## User Interface
-
-
-
-The board includes several user-interface and debugging features:
-
-
-
-\- Boot button
-
-\- Reset button
-
-\- Power indicator
-
-\- Charging indicators
-
-\- USB RX/TX indicators
-
-\- Status indicators
-
-
-
-!\[User Interface](images/User-interface.png)
-
-
-
-\---
-
-
-
-\## PCB Design
-
-
-
-The PCB was designed in \*\*KiCad 9\*\* with emphasis on compact component placement, practical routing, accessible debugging points, and clear board labeling.
-
-
-
-\### PCB Layout
-
-
-
-!\[PCB Layout](images/PCB-layout.png)
-
-
-
-\### 3D PCB View
-
-
-
-!\[3D PCB View](images/PCB-3d-front.png)
-
-
-
-\---
-
-
-
-\## PCB Design Highlights
-
-
-
-\- Compact component placement
-
-\- Dedicated power-management section
-
-\- Short and organized signal routing
-
-\- Clearly labeled interfaces
-
-\- Accessible test points
-
-\- External GPIO expansion
-
-\- Separate functional blocks for easier debugging
-
-\- Designed with manufacturability in mind
-
-
-
-\---
-
-
-
-\## Interfaces
-
-
-
-\### USB
-
-
+## USB
 
 USB connectivity is provided for:
 
+- Power
+- Programming
+- Serial communication
 
-
-\- Power
-
-\- Programming
-
-\- Serial communication
-
-
-
-\### I2C
-
-
+## I2C
 
 The I2C interface allows additional sensors and peripherals to be connected to the board.
 
+## SPI
+
+SPI connectivity is available for peripherals requiring higher-speed communication, such as displays, memory devices, and other external modules.
+
+## GPIO
+
+Additional GPIO pins are exposed through board headers for connecting external sensors, modules, and other peripherals.
 
+---
 
-\### SPI
+# 🧪 Debugging & Test Points
 
+Dedicated test points are provided across the board to make hardware bring-up, debugging, and signal verification easier.
 
+These can be used with a:
 
-SPI is available for peripherals requiring higher-speed communication, such as displays, memory devices, and other external modules.
+- Multimeter
+- Oscilloscope
+- Logic analyzer
+- Other debugging equipment
 
+---
 
+# 🏭 Manufacturing
 
-\### GPIO
+Manufacturing files are provided in the:
 
+**`ESP32_Gerbers/`**
 
+directory.
 
-Additional GPIO pins are exposed through the board headers for external sensors, modules, and experimentation.
+The repository contains the generated **Gerber and drill files** required for PCB fabrication.
 
+DFM-related manufacturing files are also included under:
 
+**`dfm/gerber/`**
 
-\---
+---
 
+# 📁 Repository Structure
 
+    ESP32-Sensor-Board/
+    │
+    ├── ESP32_Gerbers/
+    │   └── Gerber & drill files
+    │
+    ├── Libraries/
+    │   └── Custom KiCad symbols & footprints
+    │
+    ├── dfm/
+    │   └── gerber/
+    │       └── DFM / manufacturing files
+    │
+    ├── images/
+    │   ├── ESP32-Schematic.png
+    │   ├── PCB-3d-front.png
+    │   ├── PCB-layout.png
+    │   ├── Power-section-Schematic.png
+    │   ├── Sensor-Section.png
+    │   └── User-interface.png
+    │
+    ├── KiCad 9 Esp32 Project.kicad_pro
+    ├── KiCad 9 Esp32 Project.kicad_sch
+    ├── KiCad 9 Esp32 Project.kicad_pcb
+    │
+    ├── esp32-c3-02.kicad_sch
+    ├── sensors.kicad_sch
+    ├── user_interface.kicad_sch
+    │
+    ├── .gitignore
+    └── README.md
 
-\## Manufacturing Files
+---
 
+# 🛠️ Tools & Technologies
 
+- **KiCad 9**
+- **ESP32-C3**
+- PCB Design
+- Schematic Capture
+- Hierarchical Schematics
+- Embedded Systems
+- Sensor Interfaces
+- Power Electronics
+- IoT Hardware Design
+- PCB Manufacturing
 
-Manufacturing outputs are provided in the \*\*ESP32\_Gerbers/\*\* directory.
+---
 
+# ✅ Project Status
 
+| Design Stage | Status |
+|---|---|
+| Schematic Design | ✅ Completed |
+| Hierarchical Schematic | ✅ Completed |
+| Sensor Integration | ✅ Completed |
+| Power Management | ✅ Completed |
+| PCB Layout | ✅ Completed |
+| 3D PCB Design | ✅ Completed |
+| Custom Libraries | ✅ Completed |
+| Gerber Generation | ✅ Completed |
+| DFM Analysis | ✅ Completed |
+| Hardware Fabrication | 🔄 To be updated |
 
-The repository contains the generated \*\*Gerber and drill files\*\* required for PCB fabrication.
+---
 
-
-
-DFM-related manufacturing files are also included under \*\*dfm/gerber/\*\*.
-
-
-
-\---
-
-
-
-\## Repository Structure
-
-
-
-&#x20;   ESP32-Sensor-Board/
-
-&#x20;   │
-
-&#x20;   ├── ESP32\_Gerbers/
-
-&#x20;   │   └── Manufacturing Gerber \& drill files
-
-&#x20;   │
-
-&#x20;   ├── Libraries/
-
-&#x20;   │   └── Custom KiCad symbols and footprints
-
-&#x20;   │
-
-&#x20;   ├── dfm/
-
-&#x20;   │   └── gerber/
-
-&#x20;   │       └── DFM / manufacturing files
-
-&#x20;   │
-
-&#x20;   ├── images/
-
-&#x20;   │   ├── ESP32-Schematic.png
-
-&#x20;   │   ├── PCB-3d-front.png
-
-&#x20;   │   ├── PCB-layout.png
-
-&#x20;   │   ├── Power-section-Schematic.png
-
-&#x20;   │   ├── Sensor-Section.png
-
-&#x20;   │   └── User-interface.png
-
-&#x20;   │
-
-&#x20;   ├── KiCad 9 Esp32 Project.kicad\_pro
-
-&#x20;   ├── KiCad 9 Esp32 Project.kicad\_sch
-
-&#x20;   ├── KiCad 9 Esp32 Project.kicad\_pcb
-
-&#x20;   │
-
-&#x20;   ├── esp32-c3-02.kicad\_sch
-
-&#x20;   ├── sensors.kicad\_sch
-
-&#x20;   ├── user\_interface.kicad\_sch
-
-&#x20;   │
-
-&#x20;   ├── .gitignore
-
-&#x20;   └── README.md
-
-
-
-\---
-
-
-
-\## Design Files
-
-
+# 📚 Design Files
 
 The complete KiCad project files are included in this repository.
 
+The project can be opened and further modified using **KiCad 9**.
 
+The repository includes:
 
-The project can be opened and further modified using \*\*KiCad 9\*\*.
+- KiCad project configuration
+- Main hierarchical schematic
+- Individual schematic sheets
+- PCB layout
+- Custom symbol libraries
+- Custom footprint libraries
+- Gerber files
+- Drill files
+- DFM outputs
+- Project documentation
 
+---
 
+# 👤 Author
 
-Included design files:
+**Ratnakar Sahoo**
 
+Embedded Systems & PCB Design
 
+---
 
-\- Project configuration
-
-\- Main hierarchical schematic
-
-\- Individual schematic sheets
-
-\- PCB layout
-
-\- Custom symbol libraries
-
-\- Custom footprint libraries
-
-\- Manufacturing outputs
-
-
-
-\---
-
-
-
-\## Tools \& Technologies
-
-
-
-\- \*\*KiCad 9\*\*
-
-\- \*\*ESP32-C3\*\*
-
-\- PCB Design
-
-\- Schematic Capture
-
-\- Embedded Systems
-
-\- Sensor Interfaces
-
-\- Power Electronics
-
-\- IoT Hardware Design
-
-
-
-\---
-
-
-
-\## Project Status
-
-
-
-\*\*Hardware design completed\*\*
-
-
-
-\- \[x] Schematic design
-
-\- \[x] Hierarchical schematic organization
-
-\- \[x] PCB layout
-
-\- \[x] 3D PCB design
-
-\- \[x] Sensor integration
-
-\- \[x] Power-management design
-
-\- \[x] Gerber generation
-
-\- \[x] DFM files
-
-\- \[x] Custom libraries
-
-
-
-\---
-
-
-
-\## Author
-
-
-
-\*\*Ratnakar Sahoo\*\*
-
-
-
-Embedded Systems \& PCB Design
-
-
-
-\---
-
-
-
-\## License
-
-
+# 📄 License
 
 This project is provided for educational and development purposes.
 
-
-
 Please refer to the repository contents for the applicable design and manufacturing files.
-
