@@ -1,0 +1,22 @@
+# KiCad generated/local files
+*.kicad_prl
+*-backups/
+*.kicad_sch-bak
+fp-info-cache
+sym-lib-table
+fp-lib-table
+
+# Generated logs
+*_log_missing3DModels.txt
+*_missing3DModels.txt
+
+# Generated output
+output.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
